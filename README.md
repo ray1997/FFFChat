@@ -2,7 +2,7 @@ Every Friday since the announcement of ["Factorio: Space Age"](https://www.facto
 
 Factorio will announce the sort of blogpost/teaser of what's coming next on the next expansion.
 
-Like one of many fans, I will always eager to hang around on #friday-facts on Factorio's Discord server.
+Like one of many fans, I'm always hang around on #friday-facts on Factorio's Discord server.
 
 But then, someone (can't remember their name, or find that exact message) mentioned something like "a chat lighten up every friday"
 
