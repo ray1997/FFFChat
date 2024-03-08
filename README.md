@@ -22,7 +22,7 @@ AuthorID,Author,Date,Content,Attachments,Reactions
 "xxxxxxxxxxxxxxxxxx","name","2024-03-08T13:52:23.5100000+07:00","message","",""
 ```
 
-A quick code, a slight help from [CSVHelper](https://github.com/JoshClose/CsvHelper), and a few argument with ChatGPT.
+A quick code, a slight help from [CSVHelper](https://github.com/JoshClose/CsvHelper), and [a few argument with ChatGPT](gpt_logs.md).
 
 Here's a result:
 
