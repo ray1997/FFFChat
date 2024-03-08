@@ -35,10 +35,13 @@ msg.Date.TimeOfDay <= TimeSpan.FromHours(19.55));
 
 
 Dictionary<int, int> messagePer5MinAll = [];
+int at0 = 0;
 
 //Before DST
 foreach (var message in inb4DST)
 {
+    if (message.Date.Hour == 18 && message.Date.Minute == 0)
+        at0++;
     int relateToFFF = (message.Date.TimeOfDay - TimeSpan.FromHours(18)).Minutes;
     int key = (message.Date.Hour * 100) + message.Date.Minute;
     if (key <= 1730 && key >= 1830)
@@ -59,6 +62,8 @@ foreach (var message in inb4DST)
 //DST
 foreach (var message in DST)
 {
+    if (message.Date.Hour == 19 && message.Date.Minute == 0)
+        at0++;
     int relateToFFF = (message.Date.TimeOfDay - TimeSpan.FromHours(19)).Minutes;
     int key = (message.Date.Hour * 100) + message.Date.Minute;
     if (key <= 1830 && key >= 1930)
@@ -94,4 +99,10 @@ foreach (var kvp in messagePer5MinAll.OrderBy(x => x.Key))
         Console.WriteLine($"{kvp.Key:000} {bar} {kvp.Value}");
     else
         Console.WriteLine($"{kvp.Key:00} {bar} {kvp.Value}");
+
 }
+
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine($"At exact time FFF announce, there's {at0} message(s)");
+Console.WriteLine($"Or around {at0 / 27}, every Friday");
